@@ -122,7 +122,9 @@ input:focus,
 select:focus {
     border: 2px solid #146099;
     border-radius: 5px;
+    background-color: transparent;
 }
+
 
 .background {
     background: #EDEFEF;

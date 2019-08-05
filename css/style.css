@@ -23,12 +23,6 @@ h1 {
     color: white;
 }
 
-h2 {
-    margin: 20px 0;
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-}
-
 .top-info {
     display: flex;
     min-height: 20vh;
@@ -80,6 +74,11 @@ label {
     opacity: 0.6;
 }
 
+label[for="topics"],
+label[for="hear_about_us"] {
+    margin: 10px 0;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -97,9 +96,10 @@ select {
     color: #8a97a0;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 20px;
+    transition-duration: 0.7s;
 }
 
-input[type="number"] {
+input[id="zip"] {
     background: rgba(255,255,255,0.1);
     border: none;
     border-radius: 5px;
@@ -122,7 +122,7 @@ input:focus,
 select:focus {
     border: 2px solid #146099;
     border-radius: 5px;
-    background-color: transparent;
+    background: transparent;
 }
 
 
@@ -137,26 +137,22 @@ fieldset {
     padding: 0;
 }
 
-.inline-field {
-    margin: 5px 0;
-}
-
-.padding {
-    padding: 20px 0 10px 0;
-    margin: 0;
-}
-
 textarea {
     padding: 10px 10px 40px 10px;
     font-family: 'Merriweather', serif;
     font-size: 14px;
     border: 1px solid grey;
     border-radius: 5px;
+    margin: 0;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
     margin: 0 4px 8px 0;
+}
+
+.inline-field {
+    margin: 5px 0;
 }
 
 .inline-field input,
@@ -166,12 +162,24 @@ input[type="radio"] {
 
 legend {
     padding: 10px 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+legend:first-child {
+    padding: 15px 0;
+}
+
+p {
+    padding: 10px 0;
+    margin: 0;
     opacity: 0.6;
 }
 
-/*text above textarea box*/
-label[for="topics"] {
-    margin: 10px 0;
+select:last-child {
+    border: 1px solid grey;
+    border-radius: 5px;
 }
 
 button {
@@ -187,15 +195,11 @@ button {
     cursor: pointer;
 }
 
-select:last-child {
-    border: 1px solid grey;
-    border-radius: 5px;
-}
-
 /* ****PLACEHOLDERS**** */
 
 input[id="name"]::placeholder,
-input[type="email"]::placeholder {
+input[type="email"]::placeholder,
+select[id="hear_about_us"]::placeholder {
     opacity: 0.5;
     text-align: right;
     font-style: italic;
@@ -203,14 +207,9 @@ input[type="email"]::placeholder {
 }
 
 input[type="tel"]::placeholder,
-input[type="number"]::placeholder {
+input[id="zip"]::placeholder {
     opacity: 0.5;
     font-style: italic;
-    font-size: 14px;
-}
-
-select[id="hear_about_us"]::placeholder {
-    opacity: 0.5;
     font-size: 14px;
 }
 

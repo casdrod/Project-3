@@ -7,19 +7,19 @@
 ******BASE STYLES*******
 /======================*/
 
-/* ****HEADER**** */
+/****HEADER****/
 
 .banner {
     display: flex;
-    min-height: 10vh;
+    min-height: 13vh;
     background: #26323C;
 }
 
-h1 {
+.banner p {
     margin: auto;
     font-family: 'Merriweather', serif;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
 }
 
@@ -29,16 +29,17 @@ h1 {
     flex-direction: column;
     text-align: center;
     border-bottom: 5px solid #26323C;
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
-.top-info h2 {
+h2 {
     color: #26323C;
     padding-top: 1.3em;
     padding-bottom: 5px;
     margin: auto;
     font-family: 'Merriweather', serif;
+    font-size: 20px;
 }
 
 .top-info p {
@@ -49,7 +50,7 @@ h1 {
     padding-bottom: 2em;
 }
 
-/* ****BODY**** */
+/****BODY****/
 
 body {
     display: flex;
@@ -57,7 +58,7 @@ body {
 }
 
 form {
-    width: 80%;
+    width: 90%;
     margin: auto;
     margin-top: 10px;
     flex: 1;
@@ -71,7 +72,7 @@ form {
 label {
     display: block;
     margin-bottom: 10px;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 label[for="topics"],
@@ -84,7 +85,6 @@ input[type="email"],
 input[type="tel"],
 textarea,
 select {
-    background: rgba(255,255,255,0.1);
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -96,16 +96,20 @@ select {
     color: #8a97a0;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 20px;
-    transition-duration: 0.7s;
+    transition-duration: 0.4s;
+}
+
+#state {
+   height: 50px;
+   margin: auto 0 20px 0;
+   border: none;
 }
 
 input[id="zip"] {
-    background: rgba(255,255,255,0.1);
     border: none;
     border-radius: 5px;
     font-size: 16px;
     height: auto;
-    outline: 0;
     padding: 15px;
     max-width: 150px;
     background-color: #e8eeef;
@@ -115,16 +119,27 @@ input[id="zip"] {
 }
 
 select {
-    color: black;
+    border-radius: 5px;
 }
 
+#state:focus,
 input:focus,
-select:focus {
-    border: 2px solid #146099;
+select:focus,
+textarea:focus {
+    color: black;
+    border: 1px solid #146099;
     border-radius: 5px;
+}
+
+#state:focus,
+input:focus {
     background: transparent;
 }
 
+textarea:focus,
+select:focus {
+    background: white;
+}
 
 .background {
     background: #EDEFEF;
@@ -137,20 +152,6 @@ fieldset {
     padding: 0;
 }
 
-textarea {
-    padding: 10px 10px 40px 10px;
-    font-family: 'Merriweather', serif;
-    font-size: 14px;
-    border: 1px solid grey;
-    border-radius: 5px;
-    margin: 0;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-    margin: 0 4px 8px 0;
-}
-
 .inline-field {
     margin: 5px 0;
 }
@@ -159,6 +160,9 @@ input[type="radio"] {
 .inline-field label {
     display: inline-block;
 }
+
+
+/****NEWSLETTER SECTION****/
 
 legend {
     padding: 10px 0;
@@ -171,21 +175,35 @@ legend:first-child {
     padding: 15px 0;
 }
 
-p {
+.background p {
     padding: 10px 0;
     margin: 0;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
-select:last-child {
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 0 4px 8px 0;
+}
+
+textarea {
+    padding: 10px 10px 40px 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
     border: 1px solid grey;
     border-radius: 5px;
+    margin: 0;
+}
+
+#hear_about_us {
+    border: 1px solid grey;
 }
 
 button {
     background: #21CAAC;
     color: white;
-    font-size: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
     width: 100%;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin: 0;
@@ -193,9 +211,10 @@ button {
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    font-family: 'Merriweather', serif;
 }
 
-/* ****PLACEHOLDERS**** */
+/****PLACEHOLDERS****/
 
 input[id="name"]::placeholder,
 input[type="email"]::placeholder,
@@ -213,7 +232,7 @@ input[id="zip"]::placeholder {
     font-size: 14px;
 }
 
-/* ****FOOTER**** */
+/****FOOTER****/
 
 footer {
     text-align: center;
@@ -228,6 +247,13 @@ footer {
 /======================*/
 
 @media (min-width: 768px) {
+    .banner p {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
 
     form {
         margin: 5px auto;
@@ -270,6 +296,10 @@ footer {
         width: 68.7%;
     }
 
+    #state {
+        margin: auto 0;
+    }
+
     input[type="number"] {
         align-self: flex-start;
     }
@@ -288,4 +318,14 @@ footer {
         margin: 10px 0;
     }
 
+}
+
+@media (min-width: 1024px) {
+    form {
+        width: 80%;
+    }
+
+    .top-info {
+        width: 80%;
+    }
 }

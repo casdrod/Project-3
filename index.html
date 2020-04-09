@@ -4,22 +4,21 @@
         <title>Online Registration Form</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/normalize.css">
         <link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway&display=swap" rel="stylesheet">
     </head>
-
-
     <body>
         <header>
             <div class="banner">
-                <h1>The Code Review</h1>
-            </div>
-            <div class="top-info">
-                <h2>Signup for our newsletter</h2>
-                <p>Get the latest news on how your code is doing right in your inbox</p>
+                <p>The Code Review</p>
             </div>
         </header>
 
+        <div class="top-info">
+            <h2>Signup for our newsletter</h2>
+            <p>Get the latest news on how your code is doing right in your inbox</p>
+        </div>
 
         <form action="index.html" method="post">
             <div class="contact"> 
@@ -37,10 +36,10 @@
                     </div>
 
                     <div class="container">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone"
-                                placeholder="xxx-xxx-xxxx"
-                                required>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone"
+                            placeholder="xxx-xxx-xxxx"
+                            required>
                     </div>
 
                     <div class="container">
@@ -56,7 +55,7 @@
                     <div class="container">
                         <label for="state">State</label>
                         <select id="state" name="user_state" required>
-                            <option value="" disabled selected>Choose State</option>
+                            <option value="" selected disabled>Choose State</option>
                             <option value="al">Alabama</option>
                             <option value="ak">Alaska</option>
                             <option value="az">Arizona</option>
@@ -112,7 +111,7 @@
                     <div class="container">
                         <label for="zip">Zip Code</label>
                         <div class="cont">
-                            <input  type="text" id="zip" name="zip" minlength="5" maxlength="5"
+                            <input type="text" id="zip" name="zip" minlength="5" maxlength="5"
                                 placeholder="xxxxx">
                         </div>
                     </div>

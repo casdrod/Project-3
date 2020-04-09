@@ -249,7 +249,7 @@ footer {
 
 @media (min-width: 768px) {
     .banner p {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     h2 {
@@ -303,10 +303,6 @@ footer {
 
     input[type="number"] {
         align-self: flex-start;
-    }
-
-    .zip_label {
-        max-width: 295.33px;
     }
 
     #zip {

@@ -204,7 +204,7 @@ button {
     background: #21CAAC;
     color: white;
     font-size: 16px;
-    text-transform: uppercase;
+    text-transform: uppercase !important;
     width: 100%;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin: 0;
@@ -212,7 +212,7 @@ button {
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    font-family: 'Merriweather', serif;
+    font-family: 'Merriweather', serif !important;
 }
 
 /****PLACEHOLDERS****/
@@ -305,9 +305,13 @@ footer {
         align-self: flex-start;
     }
 
+    .zip_label {
+        max-width: 295.33px;
+    }
+
     #zip {
         align-self: flex-start;
-        margin: 10px;
+        margin: 10px 0;
     }
 
     .contact {

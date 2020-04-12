@@ -80,7 +80,7 @@ label[for="topics"],
 label[for="hear_about_us"] {
     margin: 10px 0;
 }
-
+    
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -198,6 +198,7 @@ textarea {
 
 #hear_about_us {
     border: 1px solid grey;
+    margin-bottom: 5px;
 }
 
 button {
@@ -261,14 +262,18 @@ footer {
         flex: 1;
     }
 
-   form,
    .top-info {
-       width: 700px;
+       min-height: 15vh;
    }
 
    .top-info p {
         padding-top: 0;
     }
+
+    form,
+   .top-info {
+       width: 700px;
+   }
 
     .container {
         display: flex;
@@ -318,15 +323,15 @@ footer {
         flex: 2;
         margin: 10px 0;
     }
-
 }
 
 @media (min-width: 1024px) {
     form {
-        width: 80%;
+        width: 70%;
     }
 
     .top-info {
-        width: 80%;
+        width: 70%;
+        min-height: 20vh;
     }
 }

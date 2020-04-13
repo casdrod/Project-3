@@ -323,6 +323,10 @@ footer {
         flex: 2;
         margin: 10px 0;
     }
+
+    #hear_about_us {
+        margin: auto;
+    }
 }
 
 @media (min-width: 1024px) {
